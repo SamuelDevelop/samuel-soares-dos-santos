@@ -1,3 +1,8 @@
+:root{
+  --darkColor: rgb(2, 3, 7);
+  --whiteColor: rgb(228, 239, 255);
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -14,5 +19,34 @@ body {
   display: flex;
   flex-direction: column;
 
-  
+  overflow-x: hidden;
+}
+
+.bgDark{
+  background-color: var(--darkColor);
+}
+
+.bgDark *{
+  color: var(--whiteColor);
+}
+
+.bgWhite{
+  background-color: var(--whiteColor);
+}
+
+.bgWhite *{
+  color: var(--darkColor);
+}
+
+h1, h2, h3 {
+  font-family: var(--fontTitles);
+}
+
+h1{
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+p {
+  font-family: var(--fontGoogleSans);
 }
