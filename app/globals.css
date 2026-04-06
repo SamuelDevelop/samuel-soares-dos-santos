@@ -1,6 +1,6 @@
 :root{
   --darkColor: rgb(2, 3, 7);
-  --whiteColor: rgb(228, 239, 255);
+  --whiteColor: rgb(255, 255, 255);
 }
 
 *{
@@ -36,6 +36,16 @@ body {
 
 .bgWhite *{
   color: var(--darkColor);
+}
+
+.bgDark ::selection{
+  background-color: var(--whiteColor);
+  color: var(--darkColor);
+}
+
+.bgWhite ::selection{
+  background-color: var(--darkColor);
+  color: var(--whiteColor);
 }
 
 h1, h2, h3 {

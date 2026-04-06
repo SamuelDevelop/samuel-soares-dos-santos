@@ -20,7 +20,7 @@ function ApresentationSection(){
 
             <div className={styles.about}>
                 <h1>Samuel Soares</h1>
-                <p>Samuel Soares Dos Santos</p>
+                <p>Estudando: FullStack Developer</p>
             </div>
             
             <ApresentationOptions />

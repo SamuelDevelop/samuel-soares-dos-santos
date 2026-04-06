@@ -25,4 +25,13 @@
     padding: 0.3rem;
     border: 0.3rem solid var(--whiteColor);
     border-radius: 50%;
+
+    cursor: pointer;
+    transition: all 100ms ease-in-out;
+}
+
+.selfImage:hover{
+    opacity: .8;
+    padding: 0.5rem;
+    border: 0.4rem solid var(--whiteColor);
 }

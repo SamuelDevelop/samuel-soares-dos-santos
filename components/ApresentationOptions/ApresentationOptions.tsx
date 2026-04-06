@@ -14,7 +14,7 @@ function ApresentationOptions(){
                 onClick={() => router.push("/sobre")}
             >
                 <FaUserAlt className={styles.option}/>
-                <p>Sobre</p>
+                <p>Perfil</p>
             </div>
             <div className={styles.optionGroup}
                 onClick={() => router.push("/projetos")}

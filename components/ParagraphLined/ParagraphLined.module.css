@@ -1,0 +1,11 @@
+.verticalParagraphLined{
+    border-left: 2px rgba(151, 151, 151, 0.726) solid;
+    border-radius: .3rem;
+    padding: .4rem;
+}
+
+.horizontalParagraphLined{
+    border-bottom: 2px rgba(151, 151, 151, 0.726) solid;
+    border-radius: .3rem;
+    padding: .4rem;
+}

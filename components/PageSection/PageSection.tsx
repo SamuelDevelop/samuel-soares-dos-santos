@@ -5,11 +5,10 @@ import Image, { StaticImageData } from "next/image";
 type pageSectionProps = {
     children : ReactNode,
     colorClass : string,
-    image: StaticImageData,
     toLeft: boolean
 }
 
-function PageSection({children, colorClass, image, toLeft} : pageSectionProps){
+function PageSection({children, colorClass, toLeft} : pageSectionProps){
     
     return (
         <section className={
@@ -23,9 +22,7 @@ function PageSection({children, colorClass, image, toLeft} : pageSectionProps){
                 }
             >
                 {children}
-            </div>
-
-            <Image src={image} alt="imagem" className={styles.pageSectionImage}/>  
+            </div>  
         </section>
     )
 }
