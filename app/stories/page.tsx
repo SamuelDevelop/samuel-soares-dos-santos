@@ -1,7 +1,9 @@
+import StoryContainer from "@/components/Stories/StoryContainer";
+
 function Stories(){
     return (
         <>
-            <h1>My stories</h1>
+            <StoryContainer/>
         </>
     )
 }

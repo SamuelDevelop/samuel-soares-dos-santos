@@ -43,22 +43,22 @@ function HomePageSections(){
             <PageSection 
                 children = {
                 <>
-                    <h1>Meus Projetos</h1>
-                    <p>Conheça Agora Tudo que eu desenvolvi até aqui.</p>
-                </>
-                } 
-                colorClass="bgWhite"
-                toLeft={false}
-            />
-            <PageSection 
-                children = {
-                <>
                     <h1>Minha Prateleira de Habilidades</h1>
                     <p>Conheça Agora Tudo que aprendi para que eu pudesse estar aqui e fazendo esses projetos</p>
                 </>
                 } 
-                colorClass="bgDark"
+                colorClass="bgWhite"
                 toLeft={true}
+            />
+            <PageSection 
+                children = {
+                <>
+                    <h1>Meus Projetos</h1>
+                    <p>Conheça Agora Tudo que eu desenvolvi até aqui.</p>
+                </>
+                } 
+                colorClass="bgPurple"
+                toLeft={false}
             />
             <PageSection 
                 children = {
