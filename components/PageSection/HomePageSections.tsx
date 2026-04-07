@@ -1,9 +1,10 @@
 import PageSection from "./PageSection";
-import imagem from "../../assets/images/scssCode.jpg";
-import hello from "../../assets/images/hello.gif";
 import ApresentationOptions from "../ApresentationOptions/ApresentationOptions";
-import VerticalParagraphLined from "../ParagraphLined/VerticalParagraphLined";
-import HorizontalParagraphLined from "../ParagraphLined/HorizontalParagraphLined";
+
+import prateleiraImage from "../../assets/images/prateleira.jpg"
+import projetosImage from "../../assets/images/projetos.jpg"
+import genericCodeImage from "../../assets/images/genericCode.jpg"
+import ImageSection from "../ImageSection/ImageSection";
 
 function HomePageSections(){
     return (
@@ -25,7 +26,7 @@ function HomePageSections(){
             <PageSection 
                 children = {
                 <>
-                    <h1>Correndo na pista...</h1>
+                    <h1>Um Ponto de Partida</h1>
                     
                     <p>Nasci em Minas Gerais, estado do Brasil, em 2008</p>
                     <p>E desde pequeno fui apaixonado pelo mundo da tecnologia.</p>
@@ -47,8 +48,20 @@ function HomePageSections(){
                     <p>Conheça Agora Tudo que aprendi para que eu pudesse estar aqui e fazendo esses projetos</p>
                 </>
                 } 
-                colorClass="bgWhite"
+                colorClass="bgPurple"
                 toLeft={true}
+            />
+            <ImageSection 
+                image={prateleiraImage}
+                alt="prateleira"
+                bgColor="bgPurple"
+                positon="Right"             
+            />
+            <ImageSection 
+                image={projetosImage}
+                alt="projetos"
+                bgColor="bgPurple"
+                positon="Left"            
             />
             <PageSection 
                 children = {
@@ -59,6 +72,12 @@ function HomePageSections(){
                 } 
                 colorClass="bgPurple"
                 toLeft={false}
+            />
+            <ImageSection 
+                image={genericCodeImage}
+                alt="projetos"
+                bgColor="bgWhite"
+                positon="Center"            
             />
             <PageSection 
                 children = {

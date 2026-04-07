@@ -26,3 +26,27 @@
 .optionGroup p{
     font-size: 11pt;
 }
+
+@media (max-width: 500px) {
+    .option{
+        font-size: 1rem;
+    }
+
+    .optionGroup p{
+        font-size: 10pt;
+    }
+}
+
+@media (max-width: 400px) {
+    .option{
+        font-size: .8rem;
+    }
+
+    .apresentationOptions{
+        gap: .6rem;
+    }
+
+    .optionGroup p{
+        font-size: 8pt;
+    }
+}
