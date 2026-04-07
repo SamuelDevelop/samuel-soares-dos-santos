@@ -1,0 +1,28 @@
+{
+    "meus_projetos" : [
+
+        {
+            "nome" : "Enquetecom",
+            "descrição": " é um projeto Web que visa possibilitar a criação de enquetes dinâmicas e checagem de votos. É um projeto simples que visa aperfeiçoar minhas habilidades nas tecnologias utilizadas, tanto FrontEnd quanto o Backend.",
+            "tecnologia" : "typescript",
+            "link_repo"  : "https://github.com/SamuelDevelop/enquetecom",
+            "temTeste" : false,
+            "link_teste" : "",
+            "aprox_data" : "7 Mar 2026",
+            "temImagem": false,
+            "imagem_link" : ""
+        },
+
+        {
+            "nome" : "Zelda Wiki",
+            "descrição": "Minha missão aqui é criar uma aplicação web que esteja conectada a uma api de dados sobre a franquia de jogos The Legend Of Zelda.",
+            "tecnologia" : "react",
+            "link_repo"  : "https://github.com/SamuelDevelop/zelda-wiki",
+            "temTeste" : false,
+            "link_teste" : "",
+            "aprox_data" : "Mar 2026",
+            "temImagem": false,
+            "imagem_link" : ""
+        }
+    ]
+}
