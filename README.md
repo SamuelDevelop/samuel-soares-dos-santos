@@ -2,7 +2,7 @@ My personal WebSite | Meu Site Pessoal
 
 Hi! Bem vindo ao repo do meu site pessoal, visite em:
 
-<a href="https://samuel-soares-dos-santos.vercel.app/">Acessar Agora</a>
+<a href="https://samuel-soares-dos-santos.vercel.app/">Acessar Aqui</a>
 
 ## Tecnologias:
 
