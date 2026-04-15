@@ -1,8 +1,8 @@
+import Tecnologia from "@/classes/Tecnologia";
 import { StaticImageData } from "next/image"
 
 type TecnologiasProps = {
-    imagens: StaticImageData[],
-    nomes?: string[] 
+    tecnologias : Tecnologia[]
 }
 
 export default TecnologiasProps;

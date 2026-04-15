@@ -23,3 +23,5 @@ class Tecnologia {
         return this.alt;
     }
 }
+
+export default Tecnologia;

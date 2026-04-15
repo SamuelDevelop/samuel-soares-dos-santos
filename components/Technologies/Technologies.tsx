@@ -1,15 +1,17 @@
 import TecnologiasProps from "@/types/typeTecnologias";
 import Image from "next/image";
+import styles from "./Technologies.module.css"
 
-function Technologies({imagens, nomes} : TecnologiasProps){
+function Technologies({tecnologias} : TecnologiasProps){
     return(
-        <section>
+        <section className={styles.tecnologias}>
             {
-                imagens.map((imagem) => (
+                tecnologias.map((tecnologia) => (
                     <Image 
-                        key={imagem.src} 
-                        src={imagem}
-                        alt={"tecnologia"}
+                        className={styles.techImage}
+                        key={tecnologia.getImagem().src} 
+                        src={tecnologia.getImagem()}
+                        alt={tecnologia.getAlt()}
                     />
                 ))
             }
