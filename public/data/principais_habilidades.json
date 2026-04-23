@@ -1,0 +1,19 @@
+{
+    "pinnedSkills": [
+        {
+            "nome": "Typescript",
+            "image": "/technologies/typescript.svg",
+            "alt": "logo do typescript"
+        },
+        {
+            "nome": "Java Spring Boot",
+            "image": "/technologies/spring-boot.svg",
+            "alt": "logo do Java Spring"
+        },
+        {
+            "nome": "PostegreSQL",
+            "image": "/technologies/pgsql.svg",
+            "alt": "logo do PostegreSQL"
+        }
+    ]
+}

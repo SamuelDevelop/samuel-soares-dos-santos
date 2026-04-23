@@ -25,7 +25,9 @@ function ImageSection({image, bgColor, alt, positon}: props){
             <Image
                 className={styles.image}
                 src={image}
-                alt={alt}            
+                alt={alt}   
+                width={1000}
+                height={1000}         
             />
         </section>
     )

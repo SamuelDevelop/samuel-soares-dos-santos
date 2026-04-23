@@ -1,11 +1,11 @@
 import { StaticImageData } from "next/image";
 
 class Tecnologia {
-    private imagem : StaticImageData;
+    private imagem : StaticImageData | string;
     private nome : string;
     private alt : string;
 
-    constructor(imagem : StaticImageData, nome : string, alt : string){
+    constructor(imagem : StaticImageData | string, nome : string, alt : string){
         this.imagem = imagem;
         this.nome = nome;
         this.alt = alt;
@@ -15,7 +15,7 @@ class Tecnologia {
         return this.imagem;
     }
 
-    public getnome(){
+    public getNome(){
         return this.nome;
     }
 

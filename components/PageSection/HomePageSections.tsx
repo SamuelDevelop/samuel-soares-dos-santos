@@ -1,3 +1,4 @@
+"use client"
 import PageSection from "./PageSection";
 import ApresentationOptions from "../ApresentationOptions/ApresentationOptions";
 
@@ -6,7 +7,24 @@ import projetosImage from "../../assets/images/projetos.jpg"
 import genericCodeImage from "../../assets/images/genericCode.jpg"
 import ImageSection from "../ImageSection/ImageSection";
 
+import { useEffect, useState } from "react";
+import Technologies from "../Technologies/Technologies";
+import { getPinnedSkills } from "@/service/fetch";
+import Tecnologia from "@/classes/Tecnologia";
+
 function HomePageSections(){
+
+    const [pinnedSkills, setPinnedSkills] = useState<Tecnologia[]>([]);
+
+    useEffect(() => {
+        async function carregarDados(){
+            const data = await getPinnedSkills();
+            setPinnedSkills(data);
+        }
+
+        carregarDados();
+    }, []);      
+
     return (
         <>
             <PageSection 
@@ -41,28 +59,27 @@ function HomePageSections(){
                 colorClass="bgDark"
                 toLeft={true}
             />
+            
             <PageSection 
                 children = {
-                <>
-                    <h1>Minha Prateleira de Habilidades</h1>
-                    <p>Conheça Agora Tudo que aprendi para que eu pudesse estar aqui e fazendo esses projetos</p>
-                </>
+                    <>
+                        <h1>Minha Prateleira de Habilidades</h1>
+                        <p>Conheça Agora Tudo que aprendi para que eu pudesse estar aqui e fazendo esses projetos</p>
+                        {
+                            pinnedSkills != null ?
+                            <Technologies 
+                                tecnologias={pinnedSkills}
+                            />
+                            :
+                            ""
+                        }                        
+                    </>
                 } 
                 colorClass="bgPurple"
                 toLeft={true}
             />
-            <ImageSection 
-                image={prateleiraImage}
-                alt="prateleira"
-                bgColor="bgPurple"
-                positon="Right"             
-            />
-            <ImageSection 
-                image={projetosImage}
-                alt="projetos"
-                bgColor="bgPurple"
-                positon="Left"            
-            />
+
+            
             <PageSection 
                 children = {
                 <>
@@ -73,12 +90,7 @@ function HomePageSections(){
                 colorClass="bgPurple"
                 toLeft={false}
             />
-            <ImageSection 
-                image={genericCodeImage}
-                alt="projetos"
-                bgColor="bgWhite"
-                positon="Center"            
-            />
+            
             <PageSection 
                 children = {
                 <>

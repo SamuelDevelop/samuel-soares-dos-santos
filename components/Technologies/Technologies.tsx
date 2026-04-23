@@ -7,12 +7,18 @@ function Technologies({tecnologias} : TecnologiasProps){
         <section className={styles.tecnologias}>
             {
                 tecnologias.map((tecnologia) => (
-                    <Image 
-                        className={styles.techImage}
-                        key={tecnologia.getImagem().src} 
-                        src={tecnologia.getImagem()}
-                        alt={tecnologia.getAlt()}
-                    />
+                    <div className={styles.tecnologia}>
+                        <Image 
+                            className={styles.techImage}
+                            key={tecnologia.getNome()} 
+                            src={tecnologia.getImagem()}
+                            alt={tecnologia.getAlt()}
+                            width={1000}
+                            height={1000} 
+                        />
+                        <p>{tecnologia.getNome()}</p>
+                    </div>
+                    
                 ))
             }
         </section>

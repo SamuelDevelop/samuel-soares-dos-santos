@@ -2,7 +2,7 @@ import Footer from "@/components/Footer/Footer";
 import PageSection from "@/components/PageSection/PageSection";
 import Technologies from "@/components/Technologies/Technologies";
 
-import * as tecnologiasTiers from "@/data/tecnologiasTiers"
+
 
 function Skills(){
     
@@ -24,7 +24,7 @@ function Skills(){
                 children = {
                 <>
                     <h1>Pratileira 1:</h1>
-                    <Technologies tecnologias={tecnologiasTiers.tecnologiasTier1}/>
+                    
                     <p>São as tecnologias que mais utilizei durante meu processo de aprendizado, que julgo possuir um maior conhecimento comparadas as demais e muito dificilmente deixarei de usar.</p>
                 </>
                 } 
@@ -35,7 +35,7 @@ function Skills(){
                 children = {
                 <>
                     <h1>Pratileira 2:</h1>
-                    <Technologies tecnologias={tecnologiasTiers.tecnologiasTier2}/>
+                    
                     <p>São as tecnologias que mais estou utilizando recentemente, que mais tenho dedicado esforços, que pretendo trabalhar fututamente mas que ainda estou em processo de aprendizagem.</p>
                 </>
                 } 
@@ -46,7 +46,7 @@ function Skills(){
                 children = {
                 <>
                     <h1>Pratileira 3:</h1>
-                    <Technologies tecnologias={tecnologiasTiers.tecnologiasTier3}/>
+                    
                     <p>São tecnologias que utilizo ou já utilizei em alguns contextos, seja para aprendizado, seja para algum projeto, mas sem nenhuma grande pretenção futura aparente.</p>
                 </>
                 } 
@@ -57,7 +57,7 @@ function Skills(){
                 children = {
                 <>
                     <h1>Pratileira 4:</h1>
-                    <Technologies tecnologias={tecnologiasTiers.tecnologiasTier4}/>
+                   
                     <p>São tecnologias que eu aprendi, já tive que estudar e até fazer projetos, mas que já faz algum tempo que não utilizei mais.</p>
                 </>
                 } 
@@ -68,7 +68,7 @@ function Skills(){
                 children = {
                 <>
                     <h1>Outras Tecnologias:</h1>
-                    <Technologies tecnologias={tecnologiasTiers.outrasTecnologias}/>
+                    
                 </>
                 } 
                 colorClass="bgWhite"

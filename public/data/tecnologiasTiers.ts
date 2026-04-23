@@ -1,25 +1,25 @@
 import Tecnologia from "@/classes/Tecnologia";
 
-import tecHTML from "@/assets/images/technologies/html.svg"
-import tecCSS from "@/assets/images/technologies/css.svg"
-import tecJS from "@/assets/images/technologies/javascript.svg"
-import tecJava from "@/assets/images/technologies/java.svg"
+import tecHTML from "/technologies/html.svg"
+import tecCSS from "/technologies/css.svg"
+import tecJS from "/technologies/javascript.svg"
+import tecJava from "/technologies/java.svg"
 
-import tecTypescript from "@/assets/images/technologies/typescript.svg"
-import tecSpring from "@/assets/images/technologies/spring-boot.svg"
-import tecReact from "@/assets/images/technologies/react.svg"
-import tecPG from "@/assets/images/technologies/pgsql.svg"
+import tecTypescript from "/technologies/typescript.svg"
+import tecSpring from "/technologies/spring-boot.svg"
+import tecReact from "/technologies/react.svg"
+import tecPG from "/technologies/pgsql.svg"
 
-import tecPython from "@/assets/images/technologies/python.svg"
-import tecMySql from "@/assets/images/technologies/mysql.svg"
-import tecFlask from "@/assets/images/technologies/flask.svg"
+import tecPython from "/technologies/python.svg"
+import tecMySql from "/technologies/mysql.svg"
+import tecFlask from "/technologies/flask.svg"
 
-import tecPhp from "@/assets/images/technologies/php.svg"
+import tecPhp from "/technologies/php.svg"
 
-import tecWindows from "@/assets/images/technologies/windows.svg"
-import tecLinux from "@/assets/images/technologies/linux-mint.svg"
-import tecTrello from "@/assets/images/technologies/trello.svg"
-import tecCanva from "@/assets/images/technologies/canva.svg"
+import tecWindows from "/technologies/windows.svg"
+import tecLinux from "/technologies/linux-mint.svg"
+import tecTrello from "/technologies/trello.svg"
+import tecCanva from "/technologies/canva.svg"
 
 export const tecnologiasTier1 = [
     new Tecnologia(tecHTML, "html", "imagem html"),

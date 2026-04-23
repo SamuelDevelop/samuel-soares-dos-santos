@@ -22,12 +22,12 @@
     max-height: 250px;
 
     box-sizing: border-box;
-    padding: 0.3rem;
-    border: 0.3rem solid var(--whiteColor);
+    padding: 0.5rem;
+    border: 0.2rem solid var(--whiteColor);
     border-radius: 50%;
 
     cursor: pointer;
-    transition: all 100ms ease-in-out;
+    transition: all 200ms ease-in-out;
 }
 
 @media (max-width: 600px) {
@@ -38,7 +38,7 @@
 }
 
 .selfImage:hover{
-    opacity: .8;
-    padding: 0.5rem;
-    border: 0.4rem solid var(--whiteColor);
+    padding: 1rem;
+    filter: brightness(90%);
+    border: 0.4rem solid var(--purpleColor);
 }
