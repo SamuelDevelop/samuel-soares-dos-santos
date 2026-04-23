@@ -62,3 +62,13 @@ export async function getTecnologies(tier: number) {
 
     return tecnologiasArray;
 }
+
+export async function getTecImage(nome: string) {
+    const data = await fetchJSONData("imagens_tecnologias");
+
+    const key = nome
+        .toLowerCase()
+        .replace(/\s+/g, "_");
+
+    return data[key] ?? null;
+}

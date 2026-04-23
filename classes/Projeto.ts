@@ -1,24 +1,27 @@
+import { ProjetoProps } from "@/types/typeProjeto";
 
-export class Projeto{
-    public nome : string;
-    public descrição:  string;
-    public tecnologia : string;
-    public linkRepo  : string;
-    public temTeste : boolean;
-    public linkTeste : string | null;
-    public aproxData : string;
+export class Projeto {
+    public nome: string;
+    public descricao: string;
+    public tecnologias: string[];
+    public linkRepo: string;
+    public temTeste: boolean;
+    public linkTeste: string | null;
+    public aproxData: string;
     public temImagem: boolean;
-    public imagemLink : string | null; 
+    public imagemLink: string | null;
+    public tipo: "game" | "site" | "other";
 
-    constructor(nome : string, descrição:  string, tecnologia : string, linkRepo  : string, temTeste : boolean, linkTeste : string | null, aproxData : string,temImagem: boolean,  imagemLink : string | null) {
-        this.nome = nome;
-        this.descrição = descrição;
-        this.tecnologia = tecnologia;
-        this.linkRepo = linkRepo;
-        this.temTeste = temTeste;
-        this.linkTeste = linkTeste;
-        this.aproxData = aproxData;
-        this.temImagem = temImagem;
-        this.imagemLink = imagemLink;
+    constructor(props: ProjetoProps) {
+        this.nome = props.nome;
+        this.descricao = props.descricao;
+        this.tecnologias = props.tecnologias;
+        this.linkRepo = props.linkRepo;
+        this.temTeste = props.temTeste ?? false;
+        this.linkTeste = props.linkTeste ?? null;
+        this.aproxData = props.aproxData;
+        this.temImagem = props.temImagem ?? false;
+        this.imagemLink = props.imagemLink ?? null;
+        this.tipo = props.tipo;
     }
 }

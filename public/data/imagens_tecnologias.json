@@ -1,0 +1,23 @@
+{
+  "windows": "/technologies/windows.svg",
+  "linux_mint": "/technologies/linux-mint.svg",
+  "trello": "/technologies/trello.svg",
+  "canva": "/technologies/canva.svg",
+
+  "html": "/technologies/html.svg",
+  "css": "/technologies/css.svg",
+  "javascript": "/technologies/javascript.svg",
+  "java": "/technologies/java.svg",
+
+  "typescript": "/technologies/typescript.svg",
+  "spring_boot": "/technologies/spring-boot.svg",
+  "react": "/technologies/react.svg",
+  "postgresql": "/technologies/pgsql.svg",
+
+  "python": "/technologies/python.svg",
+  "mysql": "/technologies/mysql.svg",
+  "python_flask": "/technologies/flask.svg",
+
+  "php": "/technologies/php.svg",
+  "figma": "/technologies/figma.svg"
+}
