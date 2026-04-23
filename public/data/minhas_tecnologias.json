@@ -1,0 +1,101 @@
+{
+    "tier0": [
+        {
+        "nome": "Windows",
+        "image": "/technologies/windows.svg",
+        "alt": "logo do Windows"
+        },
+        {
+        "nome": "Linux Mint",
+        "image": "/technologies/linux-mint.svg",
+        "alt": "logo do Linux Mint"
+        },
+        {
+        "nome": "Trello",
+        "image": "/technologies/trello.svg",
+        "alt": "logo do Trello"
+        },
+        {
+        "nome": "Canva",
+        "image": "/technologies/canva.svg",
+        "alt": "logo do Canva"
+        }
+    ],
+
+    "tier1": [
+    {
+      "nome": "HTML",
+      "image": "/technologies/html.svg",
+      "alt": "logo do HTML"
+    },
+    {
+      "nome": "CSS",
+      "image": "/technologies/css.svg",
+      "alt": "logo do CSS"
+    },
+    {
+      "nome": "JavaScript",
+      "image": "/technologies/javascript.svg",
+      "alt": "logo do JavaScript"
+    },
+    {
+      "nome": "Java",
+      "image": "/technologies/java.svg",
+      "alt": "logo do Java"
+    }
+  ],
+
+  "tier2": [
+    {
+      "nome": "TypeScript",
+      "image": "/technologies/typescript.svg",
+      "alt": "logo do TypeScript"
+    },
+    {
+      "nome": "Spring Boot",
+      "image": "/technologies/spring-boot.svg",
+      "alt": "logo do Spring Boot"
+    },
+    {
+      "nome": "React",
+      "image": "/technologies/react.svg",
+      "alt": "logo do React"
+    },
+    {
+      "nome": "PostgreSQL",
+      "image": "/technologies/pgsql.svg",
+      "alt": "logo do PostgreSQL"
+    }
+  ],
+
+  "tier3": [
+    {
+      "nome": "Python",
+      "image": "/technologies/python.svg",
+      "alt": "logo do Python"
+    },
+    {
+      "nome": "MySQL",
+      "image": "/technologies/mysql.svg",
+      "alt": "logo do MySQL"
+    },
+    {
+      "nome": "Python Flask",
+      "image": "/technologies/flask.svg",
+      "alt": "logo do Flask"
+    }
+  ],
+
+  "tier4": [
+    {
+      "nome": "PHP",
+      "image": "/technologies/php.svg",
+      "alt": "logo do PHP"
+    },
+    {
+      "nome": "Figma",
+      "image": "/technologies/figma.svg",
+      "alt": "logo do Figma"
+    }
+  ]  
+}

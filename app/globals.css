@@ -1,7 +1,7 @@
 :root{
   --darkColor: rgb(2, 3, 7);
   --whiteColor: rgb(255, 255, 255);
-  --purpleColor: rgb(69, 16, 104);
+  --purpleColor: #6E00B3;
 }
 
 *{
@@ -55,6 +55,11 @@ body {
 .bgWhite ::selection{
   background-color: var(--darkColor);
   color: var(--whiteColor);
+}
+
+.bgPurple ::selection{
+  background-color: var(--whiteColor);
+  color: var(--purpleColor);
 }
 
 h1, h2, h3 {

@@ -40,5 +40,5 @@
 .selfImage:hover{
     padding: 1rem;
     filter: brightness(90%);
-    border: 0.4rem solid var(--purpleColor);
+    border: 0.4rem solid #9D00FF;
 }
