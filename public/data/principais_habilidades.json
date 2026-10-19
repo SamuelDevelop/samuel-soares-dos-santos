@@ -19,6 +19,16 @@
             "nome": "React",
             "image": "/technologies/react.svg",
             "alt": "logo do React"
+        },
+        {
+            "nome": "Docker - Compose",
+            "image": "/technologies/docker.svg",
+            "alt": "logo do Docker"
+        },
+        {
+            "nome": "Next JS",
+            "image": "/technologies/next-js.svg",
+            "alt": "logo do Next Js"
         }
     ]
 }

@@ -30,26 +30,18 @@ export async function getTecnologies(tier: number) {
     const data = await fetchJSONData("minhas_tecnologias");
     const tecnologiasArray: Tecnologia[] = [];
 
-    let key = "";
+    const stackKeys = [
+        "frontend",
+        "backend",
+        "ferramentas",
+        "sistemas_operacionais",
+        "conhecimentos_basicos",
+    ] as const;
 
-    switch (tier) {
-        case 0:
-            key = "tier0";
-            break;
-        case 1:
-            key = "tier1";
-            break;
-        case 2:
-            key = "tier2";
-            break;
-        case 3:
-            key = "tier3";
-            break;
-        case 4:
-            key = "tier4";
-            break;
-        default:
-            return [];
+    const key = stackKeys[tier];
+
+    if (!key) {
+        return [];
     }
 
     const tecnologias = data[key] || [];

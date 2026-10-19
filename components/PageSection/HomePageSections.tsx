@@ -38,7 +38,6 @@ function HomePageSections(){
                     
                 </>
                 } 
-                colorClass="bgDark"
                 toLeft={false}
             />
             <PageSection 
@@ -56,7 +55,6 @@ function HomePageSections(){
                     <button>Saiba Mais...</button>
                 </>
                 } 
-                colorClass="bgDark"
                 toLeft={true}
             />
             
@@ -78,7 +76,7 @@ function HomePageSections(){
                         <p>As tecnologias vão desde Frontend e Backend até tecnologias adicionais e ferramentas que já utilizei e utilizo. Organizei-as em um formato de pratileiras, cada uma com seu respectivo peso. Veja tudo aqui:</p>                      
                     </>
                 } 
-                colorClass="bgPurple"
+                centered
                 toLeft={true}
             />
 
@@ -90,7 +88,6 @@ function HomePageSections(){
                     <p>Conheça Agora Tudo que eu desenvolvi até aqui.</p>
                 </>
                 } 
-                colorClass="bgPurple"
                 toLeft={false}
             />
             
@@ -103,7 +100,6 @@ function HomePageSections(){
                     
                 </>
                 } 
-                colorClass="bgWhite"
                 toLeft={false}
             />
             <PageSection 
@@ -113,7 +109,6 @@ function HomePageSections(){
                     <p>...e eu preciso de um textinho muito bacana pra colocar nessa parte.</p>                    
                 </>
                 } 
-                colorClass="bgWhite"
                 toLeft={true}
             />
         </>

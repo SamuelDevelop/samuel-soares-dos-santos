@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { ThemeProvider } from "@/components/Theme/ThemeProvider";
 
 
 export const metadata: Metadata = {
   title: "Samuel Soares Dos Santos",
   description: "Meu Site pessoal",
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 const fonteGoogleSans = localFont({
@@ -40,10 +44,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${fonteGoogleSans.variable} ${fonteTitulos.variable}`}
     >
-      
-      <body>{children}</body>
+      <body>
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
     </html>
   );
 }

@@ -7,25 +7,25 @@ import { getTecnologies } from "@/service/fetch";
 import { useEffect, useState } from "react";
 
 function Skills(){
-    const [tier0, setTier0] = useState<Tecnologia[]>([]);
-    const [tier1, setTier1] = useState<Tecnologia[]>([]);
-    const [tier2, setTier2] = useState<Tecnologia[]>([]);
-    const [tier3, setTier3] = useState<Tecnologia[]>([]);
-    const [tier4, setTier4] = useState<Tecnologia[]>([]);
+    const [frontend, setFrontend] = useState<Tecnologia[]>([]);
+    const [backend, setBackend] = useState<Tecnologia[]>([]);
+    const [tools, setTools] = useState<Tecnologia[]>([]);
+    const [os, setOs] = useState<Tecnologia[]>([]);
+    const [basics, setBasics] = useState<Tecnologia[]>([]);
     
     useEffect(() => {
         async function loadTecnologias() {
-            const t0 = await getTecnologies(0);
-            const t1 = await getTecnologies(1);
-            const t2 = await getTecnologies(2);
-            const t3 = await getTecnologies(3);
-            const t4 = await getTecnologies(4);
+            const frontendStack = await getTecnologies(0);
+            const backendStack = await getTecnologies(1);
+            const toolsStack = await getTecnologies(2);
+            const osStack = await getTecnologies(3);
+            const basicsStack = await getTecnologies(4);
 
-            setTier0(t0);
-            setTier1(t1);
-            setTier2(t2);
-            setTier3(t3);
-            setTier4(t4);
+            setFrontend(frontendStack);
+            setBackend(backendStack);
+            setTools(toolsStack);
+            setOs(osStack);
+            setBasics(basicsStack);
         }
 
         loadTecnologias();
@@ -36,106 +36,94 @@ function Skills(){
             <PageSection 
                 children = {
                 <>
-                    <h1>Quando falamos em habilidades...</h1>
-                    <p>Falamos também sobre um conjunto de vivências,</p>
-                    <p>Que contribuem para que estas habilidades sejam desenvolvidas, assim sendo resolvi organiza-las em pratileiras.</p>
-                    <p>Cada pratileira conta um pouquinho da históra de como chegamos até ali.</p>
+                    <h1>Meu stack por área</h1>
+                    <p>Organizei minhas tecnologias por contexto de uso, para ficar mais fácil entender onde cada uma entra no meu dia a dia.</p>
+                    <p>As seções abaixo separam frontend, backend, ferramentas, sistemas operacionais e conhecimentos básicos.</p>
                 </>
                 } 
-                colorClass="bgDark"
                 toLeft={false}
             />
             <PageSection 
                 children = {
                 <>
-                    <h1>Pratileira 1:</h1>
+                    <h1>Frontend</h1>
                     <Technologies 
-                        tecnologias={tier1}
+                        tecnologias={frontend}
                     />
                     <p>
-                        São as tecnologias que mais utilizei ao longo do meu processo de aprendizado. 
-                        Considero que tenho maior domínio sobre elas em comparação às demais e é pouco 
-                        provável que deixem de fazer parte do meu dia a dia.
+                        Tecnologias que uso para construir interfaces, componentes e experiências visuais.
                     </p>
                 </>
                 } 
-                colorClass="bgDark"
+                centered
                 toLeft={true}
             />
             <PageSection 
                 children = {
                 <>
-                    <h1>Pratileira 2:</h1>
+                    <h1>Backend</h1>
                     <Technologies 
-                        tecnologias={tier2}
+                        tecnologias={backend}
                     />
                     <p>
-                        São as tecnologias que tenho utilizado com mais frequência recentemente
-                        e às quais venho dedicando maior esforço. Pretendo trabalhar com elas no futuro, 
-                        embora eu ainda esteja em processo de aprendizado, buscando aprofundar meus 
-                        conhecimentos por meio de projetos práticos, estudos e acompanhamento do mercado.
+                        Tecnologias ligadas à lógica de negócio, APIs, banco de dados e execução do lado do servidor.
                     </p>
                 </>
                 } 
-                colorClass="bgPurple"
+                centered
                 toLeft={false}
             />
             <PageSection 
                 children = {
                 <>
-                    <h1>Pratileira 3:</h1>
+                    <h1>Ferramentas</h1>
                     <Technologies 
-                        tecnologias={tier3}
+                        tecnologias={tools}
                     />
-                    <p>São tecnologias que utilizo ou já utilizei em alguns contextos, seja para aprendizado, seja para algum projeto, mas sem nenhuma grande pretenção futura aparente.</p>
+                    <p>Ferramentas que me ajudam a organizar, versionar, publicar e desenvolver projetos.</p>
                 </>
                 } 
-                colorClass="bgDark"
+                centered
                 toLeft={true}
             />
             <PageSection 
                 children = {
                 <>
-                    <h1>Pratileira 4:</h1>
+                    <h1>Sistemas Operacionais</h1>
                     <Technologies
-                        tecnologias={tier4}
+                        tecnologias={os}
                     />
-                    <p>São tecnologias que eu aprendi, já tive que estudar e até fazer projetos, mas que já faz algum tempo que não utilizei mais.</p>
+                    <p>Ambientes que uso para estudar, desenvolver e manter meu setup de trabalho.</p>
                 </>
                 } 
-                colorClass="bgPurple"
+                centered
                 toLeft={false}
             />
             <PageSection 
                 children = {
                 <>
+                    <h1>Conhecimentos Básicos</h1>
                     <Technologies 
-                        title="Outras Tecnologias:"
-                        tecnologias={tier0}
+                        tecnologias={basics}
                     />
+                    <p>Ferramentas e linguagens que conheço em um nível mais introdutório e que ainda estou consolidando.</p>
                 </>
                 } 
-                colorClass="bgPurple"
+                centered
                 toLeft={true}
             />
             <PageSection 
                 children = {
                 <>
-                    <h1>...E pronto para conhecer o novo!</h1>
-                    
-                    <p>Falamos também sobre um conjunto de vivências,</p>
-                    <p>Que contribuem para que estas habilidades sejam desenvolvidas, assim sendo resolvi organiza-las em pratileiras.</p>
-                    <p>Cada pratileira conta um pouquinha da históra de como achegamos até ali.</p>
+                    <h1>...e isso é o stack atual</h1>
+                    <p>Essas categorias mostram como organizo meu conhecimento hoje e onde estou concentrando mais estudo e prática.</p>
                 </>
                 } 
-                colorClass="bgWhite"
                 toLeft={false}
             />
             
 
-            <Footer 
-                bgColor="bgWhite"      
-            /> 
+            <Footer /> 
         </>
     )
 }

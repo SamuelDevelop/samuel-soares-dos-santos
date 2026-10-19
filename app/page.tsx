@@ -7,10 +7,7 @@ export default function Home() {
     <>
       <ApresentationSection />
       <HomePageSections /> 
-      <Footer 
-        bgColor="bgWhite"      
-      /> 
+      <Footer /> 
     </>
-
   );
 }

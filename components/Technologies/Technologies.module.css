@@ -5,14 +5,23 @@
     align-items: center;
     justify-content: center;
 
-    background-color: rgba(0, 0, 0, 0.651);
-    
-    
-    padding: .5rem;
+    background-color: var(--surface-elevated);
+    border: 1px solid var(--border);
+        
+    padding: 2rem .5rem;
     border-radius: .4rem;
     gap: .5rem;
 
     margin: 2rem 0;
+}
+
+.marqueeViewport{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 0.4rem 0;
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
 }
 
 .tecnologia{
@@ -21,27 +30,30 @@
 
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.363));
     cursor: pointer;
     transition: 250ms ease-in-out all;
     
-    padding: .5rem;
-    border-radius: .2rem;
+    padding: .75rem 1rem;
+    border-radius: .75rem;
+    min-width: clamp(11rem, 38vw, 15rem);
+    flex: 0 0 auto;
 }
 
 .tecnologia:hover{
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.062));
+    background-color: color-mix(in srgb, var(--surface) 74%, var(--accent) 26%);
 }
 
 .techImagesPart{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 
     align-items: center;
     justify-content: center;
 
-    gap: .2rem;
+    gap: 1.25rem;
+    width: max-content;
+    animation: marqueeScroll 34s linear infinite;
 }
 
 .techImage{
@@ -54,8 +66,39 @@
     opacity: .5;
 }
 
+.tecnologia p{
+    margin-top: 0.65rem;
+    text-align: center;
+}
+
+@keyframes marqueeScroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
 @media (max-width:450px) {
     .techImage{
         width: 50px; height: 50px;
+    }
+
+    .tecnologia{
+        min-width: clamp(10rem, 65vw, 12rem);
+    }
+
+    .techImagesPart{
+        gap: 1rem;
+        animation-duration: 26s;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .techImagesPart{
+        animation: none;
+        transform: none;
     }
 }

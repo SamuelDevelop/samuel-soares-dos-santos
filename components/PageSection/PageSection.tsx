@@ -1,24 +1,37 @@
+ 'use client'
+
 import { ReactNode } from "react";
 import styles from "./PageSection.module.css"
-import Image, { StaticImageData } from "next/image";
+import { useRevealOnView } from "../useRevealOnView";
 
 type pageSectionProps = {
     children : ReactNode,
-    colorClass : string,
-    toLeft: boolean
+    toLeft: boolean,
+    centered?: boolean
 }
 
-function PageSection({children, colorClass, toLeft} : pageSectionProps){
+function PageSection({children, toLeft, centered = false} : pageSectionProps){
+    const { ref, isVisible } = useRevealOnView();
+
+    const sectionOrientation = centered
+        ? styles.sectionCenter
+        : toLeft
+            ? styles.sectionRight
+            : styles.sectionLeft;
+
+    const contextOrientation = centered
+        ? styles.contextCenter
+        : toLeft
+            ? styles.contextRight
+            : styles.contextLeft;
     
     return (
         <section className={
-            `${styles.pageSection} ${colorClass} 
-            ${toLeft ? styles.sectionRight : styles.sectionLeft}`
-        }>
+            `${styles.pageSection} ${isVisible ? styles.revealed : styles.hidden} ${sectionOrientation}`
+        } ref={ref}>
             <div 
                 className={
-                    `${styles.context}
-                    ${toLeft ? styles.contextRight : styles.contextLeft}`
+                    `${styles.context} ${contextOrientation}`
                 }
             >
                 {children}

@@ -7,35 +7,35 @@ import { getTecnologies } from "@/service/fetch";
 import { useEffect, useMemo, useState } from "react";
 
 function SkillsResume(){
-    const [tier0, setTier0] = useState<Tecnologia[]>([]);
-    const [tier1, setTier1] = useState<Tecnologia[]>([]);
-    const [tier2, setTier2] = useState<Tecnologia[]>([]);
-    const [tier3, setTier3] = useState<Tecnologia[]>([]);
-    const [tier4, setTier4] = useState<Tecnologia[]>([]);
+    const [frontend, setFrontend] = useState<Tecnologia[]>([]);
+    const [backend, setBackend] = useState<Tecnologia[]>([]);
+    const [tools, setTools] = useState<Tecnologia[]>([]);
+    const [os, setOs] = useState<Tecnologia[]>([]);
+    const [basics, setBasics] = useState<Tecnologia[]>([]);
 
     const allTecnologias = useMemo(() => {
         return [
-            ...tier1,
-            ...tier2,
-            ...tier3,
-            ...tier4,
-            ...tier0
+            ...frontend,
+            ...backend,
+            ...tools,
+            ...os,
+            ...basics
         ];
-    }, [tier1, tier2, tier3, tier4, tier0]);
+    }, [frontend, backend, tools, os, basics]);
     
     useEffect(() => {
         async function loadTecnologias() {
-            const t0 = await getTecnologies(0);
-            const t1 = await getTecnologies(1);
-            const t2 = await getTecnologies(2);
-            const t3 = await getTecnologies(3);
-            const t4 = await getTecnologies(4);
+            const frontendStack = await getTecnologies(0);
+            const backendStack = await getTecnologies(1);
+            const toolsStack = await getTecnologies(2);
+            const osStack = await getTecnologies(3);
+            const basicsStack = await getTecnologies(4);
 
-            setTier0(t0);
-            setTier1(t1);
-            setTier2(t2);
-            setTier3(t3);
-            setTier4(t4);
+            setFrontend(frontendStack);
+            setBackend(backendStack);
+            setTools(toolsStack);
+            setOs(osStack);
+            setBasics(basicsStack);
         }
 
         loadTecnologias();
@@ -47,20 +47,19 @@ function SkillsResume(){
             <PageSection 
                 children = {
                 <>
-                    <h1>Tecnologias até o momento:</h1>
+                    <h1>Stack completo até o momento</h1>
                     <Technologies 
                         tecnologias={allTecnologias}
                     />
+                    <p>Uma visão consolidada de tudo que tenho estudado e usado, agrupado por área.</p>
 
                 </>
                 } 
-                colorClass="bgDark"
+                centered
                 toLeft={false}
             />
         
-            <Footer 
-                bgColor="bgwhite"      
-            /> 
+            <Footer /> 
         </>
     )
 }

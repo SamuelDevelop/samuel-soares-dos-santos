@@ -8,6 +8,22 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+    transform: translateY(32px);
+    filter: blur(6px);
+    transition: opacity 650ms ease, transform 650ms ease, filter 650ms ease;
+    will-change: opacity, transform, filter;
+}
+
+.hidden {
+    pointer-events: none;
+}
+
+.revealed {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+    pointer-events: auto;
 }
 
 .footer{
@@ -26,5 +42,4 @@
     font-family: var(--fontTitles);
     font-size: 1.2rem;
     font-weight: bold;
-    
 }
